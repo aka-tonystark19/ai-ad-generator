@@ -17,7 +17,7 @@ app.use(express.json());
 
 app.post('/submit-form', async (req, res) => {
   const formData = req.body;
-  console.log('Received form data:');
+  console.log('Received form data: ');
   console.log(formData);
 
   try {
