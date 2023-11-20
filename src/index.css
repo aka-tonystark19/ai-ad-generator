@@ -1,13 +1,122 @@
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* background-image: url('comic_bg.jpg'); */
+  /* background-image: url('info_bg2.jpg'); */
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('info_bg.jpg');
+  /* background-image: url('comic_bg.jpg'); */
+  background-size: cover;
+  filter: blur(6px); 
+  z-index: -1;
+}
+
+label {
+  font-size: 18px;
+}
+
+input[type='text'],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 18px;
+}
+
+
+@media (max-width: 768px) {
+  label {
+    font-size: 16px;
+  }
+
+  input[type='text'],
+  textarea {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  label {
+    font-size: 14px;
+  }
+
+  input[type='text'],
+  textarea {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+
+.result-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  color: black;
+}
+
+
+.prompt-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #ccc;
+  color: #ccc;
+}
+
+.prompt-table th,
+.prompt-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  /* color: black; */
+}
+
+@media (max-width: 768px) {
+  .result-container {
+    overflow-x: auto;
+    background-color: #ccc;
+  }
+
+  .prompt-table th,
+  .prompt-table td {
+    font-size: 16px;
+  }
+}
+
+ 
+@media (max-width: 480px) {
+  .prompt-table th,
+  .prompt-table td {
+    font-size: 14px;
+  }
+}
+
+
 }
